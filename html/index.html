@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025</title>
+    <link rel="stylesheet" href="../css/index.css">  <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="../css/button.css">  <!-- 引入外部CSS文件 -->
+</head>
+<body>
+
+    <header>
+        <button id="menu-button">☰</button>  <!-- 選單按鈕 -->
+        <div class="link-container">
+            <a href="index.html">主頁</a>
+            <a href="about.html">關於我</a>
+            <a href="futrue.html">未來志向</a>
+            <a href="workmov.html">作業</a>
+            <a href="other.html">其他</a>
+        </div>
+    </header>
+
+    <!-- 側邊選單 -->
+    <div id="sidebar" class="sidebar">
+        <button id="close-button">✖</button> <!-- 新增關閉按鈕 -->
+        <a target="_blank" href="https://github.com/nanami1001">我的Github</a>
+        <a target="_blank" href="about.html">關於我</a>
+        <a target="_blank" href="futrue.html">未來志向</a>
+        <a target="_blank" href="work.html">作業1</a>
+        <a target="_blank" href="work2.html">作業2</a>
+        <a target="_blank" href="https://sayaka1515.github.io/indextest/">其他網站</a>
+        <a target="_blank" href="other.html">其他</a>
+    </div>
+
+    <main>
+      
+        <div class="resize-box" id="help-box">
+            <p id="help-text"></p>
+          
+            <div id="help-buttons" style="display: none;">
+              <button id="yes-help" style="margin: 5px;">需要</button>
+              <button id="no-help" style="margin: 5px;">不用</button>
+            </div>
+          
+            <div id="question-list" style="display: none; margin-top: 10px;">
+              <p>請問您需要哪方面的幫助？</p>
+              <button id="question" class="question-btn">怎麼開始遊戲？</button>
+              <button id="question" class="question-btn">網站卡住了怎麼辦？</button>
+              <button id="question" class="question-btn">可以儲存進度嗎？</button>
+              <button id="question" class="question-btn">畫面顯示異常怎麼辦？</button>
+              <button id="question" class="question-btn">網站適合在哪些裝置上使用？</button>
+              <button id="question" class="question-btn">進度沒保存怎麼辦？</button>
+              <button id="question" class="question-btn">有聲音效果嗎？可以關掉嗎？</button>
+              <button id="question" class="question-btn">遊戲難度可以調整嗎？</button>
+              <button id="question" class="question-btn">每次重新整理會重新開始嗎？</button>
+              <button id="question" class="question-btn">這個網站會收集我的資料嗎？</button>
+              <button id="question" class="question-btn">如何聯絡作者？</button>
+              <button id="question" class="question-btn">可以離線玩嗎？</button>
+              <button id="question" class="question-btn">為什麼我無法拖曳或操作試管？</button>
+
+            </div>
+          
+      </main>
+
+      <main>
+        <div  class="resize-box" id="answer-box" style="display: none; margin-top: 10px;"></div>
+      </div>
+    </main>
+      
+      
+
+    <footer>
+        <p>© 2025 . 保留所有權利。</p>
+    </footer>
+
+    <script src="../js/index.js"></script>  <!-- 引入外部JavaScript文件 -->
+    <script src="../js/firstindex.js"></script>  <!-- 引入外部JavaScript文件 -->
+</body>
+</html>
