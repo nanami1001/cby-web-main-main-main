@@ -1,10 +1,11 @@
-document.getElementById("menu-button").onclick = function() {
+document.getElementById("menu-button").addEventListener("click", function () {
     document.getElementById("mySidebar").style.width = "250px";
-};
+});
 
-document.getElementById("close-button").onclick = function() {
+document.getElementById("close-button").addEventListener("click", function () {
     document.getElementById("mySidebar").style.width = "0";
-};
+});
+
 // 取得當前頁面 URL
 const currentPage = window.location.pathname.split("/").pop();
 
