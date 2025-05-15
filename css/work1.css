@@ -1,0 +1,95 @@
+/* 乘法表樣式 */
+#myId {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* 乘法表的基本樣式 */
+table {
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+    color: #181818;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+}
+
+/* 表格格子樣式 */
+td {
+    border: 1px solid #00658d;
+    padding: clamp(5px, 1.5vw, 12px);
+    min-width: clamp(50px, 10vw, 100px);
+}
+
+/* 第一列標題樣式 */
+tr:first-child td {
+    font-weight: bold;
+    background-color: #68c3ff;
+    color: white;
+    font-size: clamp(0.9rem, 3vw, 1.3rem);
+}
+
+/* 高亮顏色的單元格 */
+.highlight {
+    background-color: #01b7ff;
+    color: white;
+}
+
+/* 側邊選單樣式 */
+#sidebar {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+/* 側邊選單內的連結 */
+#sidebar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+/* 側邊選單內連結懸停效果 */
+#sidebar a:hover {
+    background-color: #575757;
+}
+
+/* 側邊選單按鈕樣式 */
+#menu-button {
+    font-size: clamp(0.55rem, 2vw, 1.25rem);        /* 更小字體：最小0.75rem */
+    width: clamp(20px, 6vw, 60px);                  /* 更小寬度：最小30px，最大60px */
+    height: clamp(20px, 6vw, 60px);                 /* 更小高度：最小30px，最大60px */
+    position: fixed;
+    top: 2vh;
+    left: clamp(5px, 1.5vw, 20px);                  /* 更靠左：最小5px，最大20px */
+    background-color: rgba(1, 183, 255, 0.8);
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* 側邊選單關閉按鈕樣式 */
+#close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
