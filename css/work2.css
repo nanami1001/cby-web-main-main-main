@@ -1,0 +1,205 @@
+/* 遊戲區塊通用樣式 */
+.game-area {
+    width: 80%;              /* 寬度佔父元素的 80% */
+    border-radius: 10px;     /* 邊角圓弧 10px */
+    padding: 20px;           /* 內距 20px */
+    margin: 5px;             /* 外距 5px */
+}
+
+/* 顯示遊戲資訊（移動次數）的樣式 */
+#game-info {
+    background-color: rgba(92, 176, 255, 0.7); /* 淡藍色背景，帶透明度 */
+    font-family: 'Lucida Sans';           /* 使用現代感字型 */
+    width: 30%;                                /* 寬度佔容器 30% */
+    height: 5%;                               /* 高度佔容器 10% */
+}
+
+/* 控制列（關卡選擇與開始按鈕）的樣式 */
+#controls {
+    background-color: rgba(144, 238, 255, 0.7); /* 淡藍綠色背景，透明度 0.7 */
+    width: 40%;                                /* 寬度佔容器 30% */
+    height: 10%;                               /* 高度佔容器 10% */
+}
+
+/* 遊戲主要容器樣式（放置試管） */
+#game-container {
+    background-color: rgba(158, 255, 242, 0.7); /* 淺青綠背景，透明 */
+    display: flex;             /* 使用 flex 排列試管 */
+    flex-wrap: wrap;           /* 換行排列 */
+    justify-content: center;   /* 水平置中 */
+    margin-bottom: 20px;       /* 底部外距 */
+    width: 50%;                                /* 寬度佔容器 30% */
+    height: 10%;                               /* 高度佔容器 10% */
+}
+
+/* 每根試管的樣式 */
+.tube {
+    width: 50px;                       /* 試管寬度 */
+    height: 200px;                     /* 試管高度 */
+    border: 2px solid black;          /* 黑色邊框 */
+    border-top: 0px;                  /* 上邊不顯示邊框 */
+    border-radius: 0 0 10px 10px;     /* 底部邊角圓弧 */
+    margin: 10px;                     /* 每根試管間隔 */
+    display: flex;
+    flex-direction: column-reverse;  /* 水從下往上堆疊 */
+    overflow: hidden;                 /* 隱藏多餘部分 */
+    margin-top: 20px;                 /* 與上方間距 */
+}
+
+/* 水塊的樣式 */
+.water {
+    width: 100%; /* 水寬度與試管一致 */
+}
+
+/* 被選中的試管加上紅色邊框與動畫效果 */
+.tube.selected {
+    border-color: red; /* 原本是 'red' 字串錯誤，這裡修正成 red */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* 紅色發光效果 */
+    transform: translateY(-20px); /* 向上移動作為選中提示 */
+}
+
+/* 彈出視窗的樣式（預設隱藏在左邊） */
+.popup {
+    position: fixed;          /* 固定在畫面上 */
+    top: 0;
+    left: -100%;              /* 初始位置在畫面外 */
+    width: 80%;             /* 視窗寬度 */
+    height: 600px;             /* 高度佔整個畫面 */
+    background-color: #c0dbe1f5;/* 淺灰背景 */
+    box-shadow: 2px 0 10px rgba(0, 0, 0); /* 陰影效果 */
+    padding: 0px;
+    box-sizing: border-box;
+    z-index: 1000;            /* 層級高，確保在最上面 */
+    transition: left 0.4s ease; /* 平滑滑入動畫 */
+    font-family: sans-serif;
+    border-bottom-right-radius: 15px;
+    border-top: none;
+    border-left: none;
+    border-right: 3px solid #00658d;  /* 右邊框 */
+    border-bottom: 3px solid #00658d; /* 下邊框 */
+}
+/* 顯示彈窗時（滑出來） */
+.popup.show {
+    left: 0; /* 左側對齊畫面 */
+}
+
+/* 彈窗上方的倒數顯示區 */
+.popup-header {
+    font-weight: bold;
+    font-size: clamp(1.5rem, 6vw, 3.125rem); 
+    color: #333;
+    margin-bottom: clamp(10px, 4vw, 30px);
+    text-align: center;
+    max-width: 90vw;
+
+    /* 新增置中區塊 */
+    margin-left: auto;
+    margin-right: auto;
+
+    word-break: break-word;
+}
+
+
+
+/* 彈窗內容標題樣式 */
+.popup-content h3 {
+    margin-top: 0;
+    font-size: clamp(18px, 4vw, 25px); /* 響應式字體 */
+}
+
+.popup-content {
+    padding: clamp(1rem, 5vw, 2rem) clamp(1rem, 4vw, 2rem);
+    max-width: 90vw;
+    margin-top: clamp(1rem, 4vw, 2rem);
+    margin-bottom: clamp(1rem, 4vw, 2rem);
+    margin-left: auto;
+    margin-right: 1rem;
+    box-sizing: border-box;
+    max-height: 80vh; 
+    overflow-y: auto;
+
+    /* 隱藏滾動條但保留滾動 */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+/* Chrome, Safari, Edge */
+.popup-content::-webkit-scrollbar {
+    display: none;
+}
+
+  
+
+.popup-content h2 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem); /* 標題字體大小響應式 */
+  text-align: center;
+  margin: clamp(1rem, 3vw, 2rem) 0; /* 上下間距響應式 */
+  color: #00658d;
+
+}
+
+.popup-content ul {
+  width: 100%;                  /* 寬度填滿父容器 */
+  padding-left: 0;              /* 移除左側預設縮排 */
+  margin: 0 auto;               /* 置中 (寬度100%時影響不大) */
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  line-height: 1.6;
+  list-style-position: inside; /* 符號在文字內，方便置中 */
+  text-align: center;           /* 文字置中 */
+}
+
+.popup-content li {
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
+  text-align: center;
+}
+
+  
+  
+
+
+#play-button {
+    background-color: #ff6b81;   /* 按鈕底色（亮紅粉） */
+    color: white;                /* 文字顏色 */
+    border: none;                /* 移除邊框 */
+    padding: 12px 24px;          /* 內距 */
+    font-size: 20px;             /* 字體大小 */
+    font-weight: bold;          /* 粗體字 */
+    border-radius: 10px;         /* 圓角 */
+    cursor: pointer;             /* 滑鼠懸停變成點擊手勢 */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* 陰影效果 */
+    transition: all 0.3s ease;   /* 滑順動畫 */
+}
+
+/* 滑鼠懸停時的效果 */
+#play-button:hover {
+    background-color: #ff4757;   /* 更深一點的紅粉色 */
+    transform: scale(1.05);      /* 稍微放大 */
+}
+
+/* 點擊時的按壓效果 */
+#play-button:active {
+    transform: scale(0.95);      /* 壓下時微縮小 */
+}#level-select {
+    background-color: #74b9ff;    /* 背景色（淡藍） */
+    color: white;                 /* 文字顏色 */
+    border: none;                 /* 去邊框 */
+    padding: 10px 20px;           /* 內距 */
+    font-size: 18px;              /* 字體大小 */
+    border-radius: 10px;          /* 圓角 */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* 陰影 */
+    appearance: none;             /* 移除系統預設樣式 */
+    cursor: pointer;              /* 滑鼠樣式 */
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* 懸停時效果 */
+#level-select:hover {
+    background-color: #0984e3;
+    transform: scale(1.05);
+}
+
+/* 點擊時壓縮一點 */
+#level-select:active {
+    transform: scale(0.95);
+}

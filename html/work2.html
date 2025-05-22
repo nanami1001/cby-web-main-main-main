@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Puzzle</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/work2.css">
+</head>
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <header>
+        <button id="menu-button">☰</button>  <!-- 選單按鈕 -->
+        <div class="link-container">
+            <a href="../index.html">主頁</a>
+            <a href="about.html">關於我</a>
+            <a href="futrue.html">未來志向</a>
+            <a href="workmov.html">作業</a>
+            <a href="other.html">其他</a>
+        </div>
+    </header>
+
+    <!-- 側邊選單 -->
+    <div id="mySidebar" class="sidebar">
+        <button id="close-button">✖</button> <!-- 新增關閉按鈕 -->
+        <a target="_blank" href="https://github.com/nanami1001">我的Github</a>
+        <a target="_blank" href="about.html">關於我</a>
+        <a target="_blank" href="futrue.html">未來志向</a>
+        <a target="_blank" href="work.html">作業1</a>
+        <a target="_blank" href="work2.html">作業2</a>
+        <a target="_blank" href="https://sayaka1515.github.io/indextest/">其他網站</a>
+        <a target="_blank" href="https://nanami1001.github.io/my-react-app/">React</a>
+        <a target="_blank" href="other.html">其他</a>
+    </div>
+
+    <main>
+        <h1 >Water Puzzle Game</h1>
+        <div id="game-info" class="game-area">
+            <p>移動次數：<span id="move-count">0</span> | 時間：<span id="time-count">0</span> 秒</p>
+          </div>
+          
+        
+        <div id="controls" class="game-area">
+            <select id="level-select">
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <option value="4">Level 4</option>
+                <option value="5">Level 5</option>
+                <option value="6">Level 6</option>
+                <option value="7">Level 7</option>
+                <option value="8">Level 8</option>
+                <option value="9">Level 9</option>
+                <option value="10">Level 10</option>
+            </select>
+            <button id="play-button">PLAY</button>
+        </div>
+
+        <div id="game-container" class="game-area">
+            <!-- 遊戲區域動態生成 -->
+        </div>
+        <div id="rule-popup" class="popup">
+            <div class="popup-header">
+              遊戲將在 <span id="countdown">3</span> 秒後開始！
+            </div>
+            <div class="popup-content">
+              <h2>遊戲規則</h2>
+              <ul>
+                <li>點擊試管選擇。</li>
+                <li>再次點擊另一個試管以倒水。</li>
+                <li>相同顏色的水可以倒在一起。</li>
+                <li>每根試管最多 4 層水。</li>
+                <li>讓所有試管都變成單一顏色即獲勝！</li>
+              </ul>
+            </div>
+          </div>
+    </main>
+
+    <footer>
+        <p>© 2025 . 保留所有權利。</p>
+    </footer>
+    <script src="../js/waterpuzzle.js"></script>
+    <script src="../js/work2.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/menu.js"></script>
+    
+</body>
+</html>
