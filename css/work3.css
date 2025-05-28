@@ -1,0 +1,139 @@
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+    
+  }
+  
+  .calculator {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin: auto; /* ⬅️ 新增這行 */
+    transition: transform 0.3s ease;
+    
+  }
+  
+  .title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .title-bar button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+    border: none;
+    background-color: #ffd6bd;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .display {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    text-align: right;
+    margin: 1rem 0;
+    word-wrap: break-word;
+    min-height: 2.5rem;
+    background-color: #fafafa;
+    border-radius: 8px;
+    color: rgb(69, 69, 69);
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  
+ /* 共通按鈕樣式 */
+button {
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* 數字按鈕 */
+  .btn-num {
+    background-color: #eaf8fd;
+  } 
+  .btn-num:hover {
+    background-color: #ddd;
+  }
+  
+  /* 運算符號 */
+  .btn-op {
+    background-color: #53c8c8;
+  }
+  .btn-op:hover {
+    background-color: #53c8c8;
+  }
+  
+  /* 函數符號 () . = */
+  .btn-func {
+    background-color: #b3e5fc;
+  }
+  .btn-func:hover {
+    background-color: #81d4fa;
+  }
+  
+  /* 刪除與清除 */
+  .btn-clear {
+    background-color: #f44336;
+    color: white;
+  }
+  .btn-clear:hover {
+    background-color: #d32f2f;
+  }
+  
+  
+  @media (max-width: 500px) {
+    .calculator {
+      max-width: 95%;
+      transform: scale(0.9);
+    }
+  
+    .display {
+      font-size: 1.5rem;
+    }
+  
+    button {
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+  }
+  #result {
+    font-size: 1.3rem; /* 你想要的大小 */
+    /* 你也可以加粗字體、改顏色等 */
+  }
+/* 加在現有 CSS 檔案內 */
+.left-overlay {
+    position: fixed;
+    top: 0;
+    left: -100%; /* 預設不顯示 */
+    width: 100vw;
+    height: 100vh;
+    background: url('../ph/sofa.png') no-repeat left center;
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0.3); /* 可選：有點暗淡層 */
+    transition: left 0.5s ease;
+    z-index: 0; /* 讓它在最底層 */
+  }
+  
+  .left-overlay.active {
+    left: 0;
+    z-index: -1; /* 確保內容仍可點擊 */
+  }
+  

@@ -1,0 +1,58 @@
+/*----------------------ciallo1----------------------*/
+/* 左下角區域 */
+.easter-egg-zone {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    z-index: 999;
+  }
+  
+  .easter-egg-img {
+    position: absolute;
+    bottom: 10px;
+    left: -632px;
+    width: 632px;
+    height: auto;
+    transition: left 0.5s ease;
+    pointer-events: none;
+  }
+  
+  .easter-egg-zone:hover .easter-egg-img {
+    left: 0;
+  }
+  
+  /* 左下角星星容器 */
+#stars-container1 {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 632px;
+    height: 395px;
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  
+  /* 星星基礎樣式 */
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle 2.5s infinite ease-in-out;
+    filter: drop-shadow(0 0 2px white);
+  }
+  
+  /* 閃爍動畫 */
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.5);
+    }
+  }
+  

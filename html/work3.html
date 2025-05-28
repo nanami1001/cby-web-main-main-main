@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計算機</title>
+    <link rel="stylesheet" href="../css/work1.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/work3.css" />
+    <link id="theme-style" rel="stylesheet" href="../css/beach.css">
+    
+</head>
+
+<body>
+    <header>
+        <button id="menu-button">☰</button>  <!-- 選單按鈕 -->
+        <div class="link-container">
+            <a href="../index.html">主頁</a>
+            <a href="about.html">關於我</a>
+            <a href="futrue.html">未來志向</a>
+            <a href="workmov.html">作業</a>
+            <a href="other.html">其他</a>
+            <div class="theme-selector-wrapper">
+              <label for="theme-selector">主題：</label>
+              <select id="theme-selector">
+                <option value="default">預設主題</option>
+                <option value="sakura">櫻花主題</option>
+                <option value="beach">海灘主題</option>
+              </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- 側邊選單 -->
+    <div id="mySidebar" class="sidebar">
+        <button id="close-button">✖</button> <!-- 新增關閉按鈕 -->
+        <a target="_blank" href="https://github.com/nanami1001">我的Github</a>
+        <a target="_blank" href="about.html">關於我</a>
+        <a target="_blank" href="futrue.html">未來志向</a>
+        <a target="_blank" href="work.html">作業1</a>
+        <a target="_blank" href="work2.html">作業2</a>
+        <a target="_blank" href="https://sayaka1515.github.io/indextest/">其他網站</a>
+        <a target="_blank" href="https://nanami1001.github.io/my-react-app/">React</a>
+        <a target="_blank" href="other.html">其他</a>
+    </div>
+    <div class="calculator-container">
+        <div class="calculator">
+          <div class="title-bar">
+            <h1>計算機</h1>
+            <button id="toggle-mode">切換成迫真計算機</button>
+          </div>
+          <div id="display" class="display">0</div>
+          <div class="buttons">
+            <button class="btn-func">(</button>
+            <button class="btn-func">)</button>
+            <button class="btn-func">DEL</button>
+            <button class="btn-op">/</button>
+          
+            <button class="btn-num">7</button>
+            <button class="btn-num">8</button>
+            <button class="btn-num">9</button>
+            <button class="btn-op">*</button>
+          
+            <button class="btn-num">4</button>
+            <button class="btn-num">5</button>
+            <button class="btn-num">6</button>
+            <button class="btn-op">-</button>
+          
+            <button class="btn-num">1</button>
+            <button class="btn-num">2</button>
+            <button class="btn-num">3</button>
+            <button class="btn-op">+</button>
+          
+            <button class="btn-num">0</button>
+            <button class="btn-func">.</button>
+            <button class="btn-func">=</button>
+            <button class="btn-clear">C</button>
+          </div>
+        </div>
+      </div>
+
+
+    <footer>
+        <p>© 2025 . 保留所有權利。</p>
+    </footer>
+    <script src="../js/theme-switcher.js"></script> 
+    <script src="../js/index.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/work3.js"></script>
+</body>
+
+</html>

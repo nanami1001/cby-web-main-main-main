@@ -1,0 +1,67 @@
+#yes-help {
+    background-color: #499bff;   /* 按鈕底色（亮紅粉） */
+    color: white;                /* 文字顏色 */
+    border: none;                /* 移除邊框 */
+    padding: 12px 24px;          /* 內距 */
+    font-size: 20px;             /* 字體大小 */
+    font-weight: bold;          /* 粗體字 */
+    border-radius: 10px;         /* 圓角 */
+    cursor: pointer;             /* 滑鼠懸停變成點擊手勢 */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* 陰影效果 */
+    transition: all 0.3s ease;   /* 滑順動畫 */
+}
+#yes-help:hover {
+    background-color: #499bff;  /* 按鈕顏色變深 */
+    transform: scale(1.1);       /* 按鈕放大 */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* 增加陰影 */
+}
+#no-help {
+    background-color: #ff62a3;   /* 按鈕底色（亮紅粉） */
+    color: white;                /* 文字顏色 */
+    border: none;                /* 移除邊框 */
+    padding: 12px 24px;          /* 內距 */
+    font-size: 20px;             /* 字體大小 */
+    font-weight: bold;          /* 粗體字 */
+    border-radius: 10px;         /* 圓角 */
+    cursor: pointer;             /* 滑鼠懸停變成點擊手勢 */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* 陰影效果 */
+    transition: all 0.3s ease;   /* 滑順動畫 */
+}
+#no-help:hover {
+    background-color: #ff3f7f;  /* 按鈕顏色變深 */
+    transform: scale(1.1);       /* 按鈕放大 */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* 增加陰影 */
+}
+#help-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;             /* 按鈕之間的間距 */
+    margin-top: 15px;      /* 上方與文字之間的距離 */
+}
+#answer-box {
+    color: #3366cc; /* 或其他你想要的顏色，例如 red、#ff6600 等 */
+  }
+  #question {
+    background-color: #ff62a3;   /* 按鈕底色（亮紅粉） */
+    color: white;                /* 文字顏色 */
+    border: none;                /* 移除邊框 */
+    padding: 6px 12px;           /* 內距 */
+    font-size: 15px;             /* 字體大小 */
+    font-weight: bold;           /* 粗體字 */
+    border-radius: 10px;         /* 圓角 */
+    cursor: pointer;             /* 滑鼠懸停變成點擊手勢 */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* 陰影效果 */
+    transition: all 0.3s ease;   /* 滑順動畫 */
+    gap: 50px;                   /* 按鈕之間的間距 */
+    margin-top: 15px;            /* 上方與文字之間的距離 */
+}
+
+/* 當滑鼠懸停時的變化效果 */
+#question:hover {
+    background-color: #ff3f7f;  /* 按鈕顏色變深 */
+    transform: scale(1.1);       /* 按鈕放大 */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* 增加陰影 */
+}
+
+
+  
